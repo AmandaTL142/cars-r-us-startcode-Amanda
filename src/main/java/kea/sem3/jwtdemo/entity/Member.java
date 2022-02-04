@@ -36,6 +36,17 @@ public class Member extends BaseUser {
     @UpdateTimestamp
     private LocalDateTime lastEdited;
 
+    public Member(String username, String email, String password, String firstName, String lastName, String street, String city, int zip, boolean approved, String ranking) {
+        super(username, email, password);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.street = street;
+        this.city = city;
+        this.zip = zip;
+        this.approved = approved;
+        this.ranking = ranking;
+    }
+
 
     public String getFirstName() {
         return firstName;
